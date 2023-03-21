@@ -48,11 +48,11 @@ if(lista->current == NULL) return NULL;
 
 void * nextList(List * lista) {
 
-  
+  if(lista == NULL || lista->current == NULL) return NULL;
+
   lista->current = lista->current->next;
   
-  
-    return lista->current->data;
+     return lista->current->data;
 }
 
 void * lastList(List * list) {
