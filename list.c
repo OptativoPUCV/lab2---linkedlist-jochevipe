@@ -46,10 +46,12 @@ if(lista->current == NULL) return NULL;
     return lista->head->data;
 }
 
-void * nextList(List * list) {
+void * nextList(List * lista) {
 
+  lista->current->data = lista->current->next;
   
-    return NULL;
+  
+    return lista->current->data;
 }
 
 void * lastList(List * list) {
