@@ -35,15 +35,19 @@ List * createList() {
     lista->current = NULL;
     lista->tail = NULL;
 
-  
      return lista;
 }
 
-void * firstList(List * list) {
-    return NULL;
+void * firstList(List * lista) {
+
+  lista->current->next;
+  
+    return lista->head->data;
 }
 
 void * nextList(List * list) {
+
+  
     return NULL;
 }
 
