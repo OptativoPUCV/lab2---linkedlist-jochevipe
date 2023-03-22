@@ -65,7 +65,7 @@ if(lista == NULL ) return NULL;
 
   if(lista->current == NULL) return NULL;
   
-    return lista->tail->data;
+    return lista->current->data;
 }
 
 void * prevList(List * list) {
