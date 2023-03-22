@@ -61,7 +61,9 @@ void * lastList(List * lista) {
 
 if(lista == NULL ) return NULL;
 
-  lista->current = lista->current->next;
+  lista->current = lista->tail;
+
+  if(lista->current == NULL) return NULL;
   
     return lista->tail->data;
 }
