@@ -58,6 +58,10 @@ void * nextList(List * lista) {
 }
 
 void * lastList(List * list) {
+
+if(lista == NULL || lista->current == NULL) return NULL;
+
+  
     return NULL;
 }
 

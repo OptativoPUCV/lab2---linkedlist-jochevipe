@@ -93,3 +93,15 @@ Tue 21 Mar 2023 10:25:44 PM UTC:
  tests:  5|4
 total_score: 25/70
 5a3d1bf
+Wed 22 Mar 2023 12:52:26 PM UTC: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:62:4: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   62 | if(lista == NULL || lista->current == NULL) return NULL;
+      |    ^~~~~
+      |    list
+list.c:62:4: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+49126b1
