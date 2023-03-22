@@ -57,12 +57,13 @@ void * nextList(List * lista) {
      return lista->current->data;
 }
 
-void * lastList(List * list) {
+void * lastList(List * lista) {
 
-if(lista == NULL || lista->current == NULL) return NULL;
+if(lista == NULL ) return NULL;
 
+  lista->current = lista->current->next;
   
-    return NULL;
+    return lista->tail->data;
 }
 
 void * prevList(List * list) {
