@@ -134,6 +134,7 @@ void * popBack(List * list) {
 
 void * popCurrent(List * lista) {
 
+  void *aux = lista->current->data;
   if(lista->current->next == NULL){
 
     lista->tail = lista->current->prev;
@@ -151,7 +152,7 @@ void * popCurrent(List * lista) {
     free(lista->current);
   }
 
-    return lista->current->data;
+    return aux;
 }
 
 void cleanList(List * list) {
