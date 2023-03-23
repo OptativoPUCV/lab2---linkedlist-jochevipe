@@ -86,12 +86,12 @@ if(lista->head == NULL){
 
   lista->head = x;
   lista->tail = x;
-}
+}else{
 
   x->next = lista->head;
   lista->head->prev = x;
   lista->head = x;
-  
+}
 }
 
 void pushBack(List * list, void * data) {
@@ -102,7 +102,13 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * lista, void * data) {
 
-  lista->current->next = data;
+  if(lista->current->next == NULL){
+
+
+    
+  }else{
+    
+  }
   
 }
 
