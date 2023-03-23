@@ -132,8 +132,13 @@ void * popBack(List * list) {
     return popCurrent(list);
 }
 
-void * popCurrent(List * list) {
-    return NULL;
+void * popCurrent(List * lista) {
+
+  lista->current->prev = lista->current->next;
+
+
+  
+    return lista->current->data;
 }
 
 void cleanList(List * list) {
