@@ -112,10 +112,12 @@ void pushCurrent(List * lista, void * data) {
       
   }else{
 
+    x->prev = lista->current;
     lista->current->next->prev = x;
     x->next = lista->current->next;
     lista->current->next = x;
-    x->prev = lista->current;
+    
+    
   }
   
 }
