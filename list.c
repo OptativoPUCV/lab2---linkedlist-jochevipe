@@ -78,7 +78,12 @@ if(lista->current == NULL || lista->current->prev == NULL) return NULL;
     return lista->current->data;
 }
 
-void pushFront(List * list, void * data) {
+void pushFront(List * lista, void * data) {
+
+if(lista->head != NULL)
+  lista->head->prev = data;
+
+  
 }
 
 void pushBack(List * list, void * data) {
