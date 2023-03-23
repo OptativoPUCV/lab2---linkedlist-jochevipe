@@ -80,9 +80,17 @@ if(lista->current == NULL || lista->current->prev == NULL) return NULL;
 
 void pushFront(List * lista, void * data) {
 
-if(lista->head != NULL)
-  lista->head->prev = data;
-lista->head = data;
+Node* x = createNode(data);
+
+if(lista->head == NULL){
+
+  lista->head = x;
+  lista->tail = x;
+}
+
+  x->next = lista->head;
+  lista->head->prev = x;
+  lista->head = x;
   
 }
 
