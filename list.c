@@ -95,11 +95,15 @@ if(lista->head == NULL){
 }
 
 void pushBack(List * list, void * data) {
+  
     list->current = list->tail;
     pushCurrent(list,data);
 }
 
-void pushCurrent(List * list, void * data) {
+void pushCurrent(List * lista, void * data) {
+
+  lista->current->next = data;
+  
 }
 
 void * popFront(List * list) {
